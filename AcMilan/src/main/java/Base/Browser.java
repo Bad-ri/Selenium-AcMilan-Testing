@@ -1,24 +1,28 @@
 package Base;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class Browser {
   WebDriver driver;
+  Logger log = (Logger) LogManager.getLogger();
   public void openMilanWebsite(){
     driver.get("https://www.acmilan.com/en");
     driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-    // wait till page fully wait
-    //    new WebDriverWait(driver, Duration.ofSeconds(3)).until( webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
   }
   public void openBrowserSetup(String input) {
     switch(input){
       case "edge":
         setupEdgeBrowser();
+        maximizeWindow();
         break;
       case "chrome":
         setupChromeBrowser();
+        maximizeWindow();
         break;
       default:
         notSupported();
@@ -29,19 +33,23 @@ public class Browser {
     String edgePath = System.getProperty("user.dir") + "\\src\\main\\resources\\Driver\\msedgedriver.exe";
     driver = new EdgeDriver();
     System.setProperty("webdriver.edge.driver",edgePath);
-    driver.manage().window().maximize();
   }
   public void setupChromeBrowser(){
-
-    System.out.print("under construction");
+    String chromePath = System.getProperty("user.dir") + "\\src\\main\\resources\\Driver\\chromedriver.exe";
+    driver = new ChromeDriver();
+    System.setProperty("webdriver.chrome.driver",chromePath);
   }
   public void notSupported(){
-
-    System.out.print("not supported browser");
+    log.error("not supported browser");
+  }
+  public void maximizeWindow(){
+    driver.manage().window().maximize();
   }
   public void browserTermination(){
-
-    driver.quit();
+    if(driver!=null){
+      driver.close();
+      driver.quit();
+    }
   }
   public WebDriver getDriver(){
     return driver;
