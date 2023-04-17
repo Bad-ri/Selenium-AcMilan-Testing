@@ -8,8 +8,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class Browser {
-  WebDriver driver;
-  Logger log = (Logger) LogManager.getLogger();
+  protected static WebDriver driver;
+  protected static Logger log = (Logger) LogManager.getLogger();
   public void openMilanWebsite(){
     driver.get("https://www.acmilan.com/en");
     driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

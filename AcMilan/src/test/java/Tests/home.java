@@ -7,6 +7,10 @@ import io.cucumber.java.en.When;
 
 public class home {
     Browser browser = new Browser();
+
+    public static void main(String[] args) {
+
+    }
     @Given("^open browser\"(.*)\"$")
     public void openBrowser(String input){
 
