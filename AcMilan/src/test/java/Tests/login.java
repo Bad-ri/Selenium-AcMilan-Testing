@@ -1,10 +1,10 @@
 package Tests;
 
-import Base.Browser;
+import Base.browserBase;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
-public class login extends Browser {
+public class login extends browserBase {
     public static void main(String[] args) {
 
     }

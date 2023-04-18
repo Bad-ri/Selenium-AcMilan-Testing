@@ -1,59 +1,29 @@
 package Base;
 
-import Pages.loginPage;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.core.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import java.util.concurrent.TimeUnit;
+import Base.browserBase;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
-public class Browser{
-  protected static WebDriver driver;
-  protected static Logger log = (Logger) LogManager.getLogger();
-  protected static loginPage login = new loginPage();
-  public void openMilanWebsite(){
-    driver.get("https://www.acmilan.com/en");
-    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-  }
-  public void openBrowserSetup(String input) {
-    switch(input){
-      case "edge":
-        setupEdgeBrowser();
-        maximizeWindow();
-        break;
-      case "chrome":
-        setupChromeBrowser();
-        maximizeWindow();
-        break;
-      default:
-        notSupported();
-        break;
+public class browser {
+    browserBase browser = new browserBase();
+
+    public static void main(String[] args) {
+
     }
-  }
-  public void setupEdgeBrowser(){
-    String edgePath = System.getProperty("user.dir") + "\\src\\main\\resources\\Driver\\msedgedriver.exe";
-    driver = new EdgeDriver();
-    System.setProperty("webdriver.edge.driver",edgePath);
-  }
-  public void setupChromeBrowser(){
-    String chromePath = System.getProperty("user.dir") + "\\src\\main\\resources\\Driver\\chromedriver.exe";
-    driver = new ChromeDriver();
-    System.setProperty("webdriver.chrome.driver",chromePath);
-  }
-  public void notSupported(){
-    log.error("not supported browser");
-  }
-  public void maximizeWindow(){
-    driver.manage().window().maximize();
-  }
-  public void browserTermination(){
-    if(driver!=null){
-      driver.close();
-      driver.quit();
+    @Given("^open browser\"(.*)\"$")
+    public void openBrowser(String input){
+
+        browser.openBrowserSetup(input);
     }
-  }
-  public WebDriver getDriver(){
-    return driver;
-  }
+    @When("open Website")
+    public void openWebsite(){
+
+        browser.openMilanWebsite();
+    }
+    @Then("close browser")
+    public void closeBrowser(){
+
+        browser.browserTermination();
+    }
 }
