@@ -1,7 +1,7 @@
 Feature: login functionality
   Background:
     #supported browsers are [edge,chrome]
-    Given open browser"edge"
+    Given open browser"chrome"
     When open Website
   Scenario Outline: valid browse news
     Given open login page

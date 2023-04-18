@@ -1,6 +1,6 @@
 package Pages;
 
-import Base.Browser;
+import Base.browserBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,7 +9,7 @@ import org.testng.Assert;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class loginPage extends Browser{
+public class loginPage extends browserBase {
     public static void main(String[] args) {
 
     }

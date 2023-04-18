@@ -1,12 +1,12 @@
-package Tests;
+package Base;
 
-import Base.Browser;
+import Base.browserBase;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class home {
-    Browser browser = new Browser();
+public class browser {
+    browserBase browser = new browserBase();
 
     public static void main(String[] args) {
 
