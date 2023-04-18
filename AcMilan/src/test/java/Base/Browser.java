@@ -1,5 +1,6 @@
 package Base;
 
+import Pages.loginPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.WebDriver;
@@ -7,9 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import java.util.concurrent.TimeUnit;
 
-public class Browser {
+public class Browser{
   protected static WebDriver driver;
   protected static Logger log = (Logger) LogManager.getLogger();
+  protected static loginPage login = new loginPage();
   public void openMilanWebsite(){
     driver.get("https://www.acmilan.com/en");
     driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

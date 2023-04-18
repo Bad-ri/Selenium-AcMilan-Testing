@@ -2,7 +2,6 @@ package Pages;
 
 import Base.Browser;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class loginPage extends Browser{
 //    WebDriver driver ;
