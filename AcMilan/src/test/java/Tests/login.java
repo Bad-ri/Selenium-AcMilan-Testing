@@ -1,7 +1,6 @@
 package Tests;
 
 import Base.Browser;
-import Pages.loginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
@@ -15,12 +14,16 @@ public class login extends Browser {
     }
 
     @And("^Enter the Username \"(.*)\" and Password \"(.*)\"$")
-    public void enterUserInformation(String username,String password){
-        log.info(username);
-        log.info(password);
+    public void enterUserInformation(String username,String password) {
+        login.enterUserInformation("mohamed","elbadri");
     }
     @And("click login button")
-    public void clickLoginButton(){}
+    public void clickLoginButton() {
+        login.clickLoginButton();
+
+    }
     @And("verify login")
-    public void verifyLogin(){}
+    public void verifyLogin(){
+        login.notificationCheck();
+    }
 }
