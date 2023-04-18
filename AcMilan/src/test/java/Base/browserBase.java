@@ -3,6 +3,8 @@ package Base;
 import Pages.homePage;
 import Pages.loginPage;
 import Actions.javaScriptClass;
+import Pages.signUpPage;
+import Tests.signUp;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +21,7 @@ public class browserBase {
   protected static loginPage login = new loginPage();
   protected static homePage home = new homePage();
   protected static javaScriptClass js = new javaScriptClass();
+  protected static signUp register = new signUp();
 
   public void openMilanWebsite(){
     driver.get("https://www.acmilan.com/en");
