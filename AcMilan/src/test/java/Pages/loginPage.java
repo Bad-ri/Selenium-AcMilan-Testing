@@ -10,9 +10,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class loginPage extends browserBase {
-    public static void main(String[] args) {
 
-    }
     By my_account = By.xpath("//button[@class=\"CommonButton-sc-1yxf0nj-0 LoginControl__LoginButton-ir0fc9-1 jnLfVD\"]");
     By username = By.xpath("//input[@id=\"37:2;a\"]");
     By password = By.xpath("//input[@id=\"47:2;a\"]");

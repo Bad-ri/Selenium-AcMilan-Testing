@@ -25,7 +25,4 @@ public class homePage extends browserBase {
         getDriver().findElement(register).click();
     }
 
-    public static void main(String[] args) {
-
-    }
 }

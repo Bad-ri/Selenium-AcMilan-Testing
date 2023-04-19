@@ -5,9 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 
 public class signUpPage extends browserBase {
-    public static void main(String[] args) {
 
-    }
     By email = By.xpath("//input[@id=\"input-0\"]");
     By first_name = By.xpath("//input[@id=\"input-1\"]");
     By last_name = By.xpath("//input[@id=\"input-2\"]");
