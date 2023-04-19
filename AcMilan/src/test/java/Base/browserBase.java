@@ -21,7 +21,7 @@ public class browserBase {
   protected static loginPage login = new loginPage();
   protected static homePage home = new homePage();
   protected static javaScriptClass js = new javaScriptClass();
-  protected static signUp register = new signUp();
+  protected static signUpPage register = new signUpPage();
 
   public void openMilanWebsite(){
     driver.get("https://www.acmilan.com/en");
@@ -48,7 +48,7 @@ public class browserBase {
     options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
     options.setExperimentalOption("useAutomationExtension", false);
     options.addArguments("--start-maximized");
-    //options.addArguments ("--headless");
+    options.addArguments ("--headless");
     driver = new EdgeDriver(options);
     System.setProperty("webdriver.edge.driver",edgePath);
   }
