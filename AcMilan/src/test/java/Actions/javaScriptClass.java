@@ -9,7 +9,5 @@ public class javaScriptClass extends browserBase {
         js.executeScript("window.scrollBy(0,"+pixels+")");
     }
 
-    public static void main(String[] args) {
 
-    }
 }

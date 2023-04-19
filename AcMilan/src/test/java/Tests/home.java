@@ -5,9 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
 public class home extends browserBase {
-    public static void main(String[] args) {
 
-    }
     @Given("open news menu")
     public void openMenu(){
         home.clickOnNews();

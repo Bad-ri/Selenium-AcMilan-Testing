@@ -5,10 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
 public class signUp extends browserBase {
-    public static void main(String[] args) {
-
-    }
-
+ 
     @Given("open registration page")
     public void openRegisterPage() throws InterruptedException {
         home.openRegister();
