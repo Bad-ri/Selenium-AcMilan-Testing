@@ -1,0 +1,4 @@
+$(document).ready(function() {
+CucumberHTML.timelineItems.pushArray([{"id":"0b665460-b442-4b9c-a7d4-3c99b9ece7ce","feature":"Test registration functionality","scenario":"invalid registration","start":1682016407800,"group":1,"content":"","tags":"","end":1682016407809,"className":"failed"},{"id":"7816ac61-01ea-4678-b853-041d5cf78866","feature":"login functionality","scenario":"valid browse news","start":1682016407770,"group":1,"content":"","tags":"","end":1682016407786,"className":"failed"},{"id":"5e717243-60be-4f84-974b-ca6f08711817","feature":"open news section and browse for the news","scenario":"valid browse news","start":1682016388163,"group":1,"content":"","tags":"","end":1682016407750,"className":"passed"}]);
+CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[#1,main,5,main]"}]);
+});

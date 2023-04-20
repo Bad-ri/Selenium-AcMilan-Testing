@@ -8,7 +8,11 @@ import java.util.concurrent.TimeUnit;
 
 public class homePage extends browserBase {
     By news = By.xpath("//div[@class=\"NavigationHeader__Container-sc-17yzsi6-0 iupwjg\"]/nav[1]/ul[1]/li[1]/div[1]/a[1]");
-    By register = By.xpath("//a[@data-aura-rendered-by=\"12:56;a\"]");
+    By register = By.xpath("//a[@data-aura-rendered-by=\"12:58;a\"]");
+
+    public static void main(String[] args) {
+
+    }
     public void clickOnNews(){
         getDriver().findElement(news).click();
     }
@@ -21,7 +25,7 @@ public class homePage extends browserBase {
         Assert.assertTrue(Actual.contains(Expected));
     }
     public void openRegister() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         getDriver().findElement(register).click();
     }
 

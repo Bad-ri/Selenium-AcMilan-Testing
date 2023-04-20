@@ -1,10 +1,19 @@
-package Tests;
+package stepDefination;
 
 import Base.browserBase;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
 public class home extends browserBase {
+    public static void main(String[] args) {
+
+    }
+    browser bro = new browser();
+
+    public home(){
+        bro.openBrowser("chrome");
+        bro.openWebsite();
+    }
 
     @Given("open news menu")
     public void openMenu(){
@@ -17,5 +26,6 @@ public class home extends browserBase {
     @And("verify page")
     public void verifyPage(){
         home.verifyPage();
+        bro.closeBrowser();
     }
 }

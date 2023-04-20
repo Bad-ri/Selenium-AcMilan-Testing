@@ -4,7 +4,6 @@ import Pages.homePage;
 import Pages.loginPage;
 import Actions.javaScriptClass;
 import Pages.signUpPage;
-import Tests.signUp;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.WebDriver;

@@ -1,10 +1,19 @@
-package Tests;
+package stepDefination;
 
 import Base.browserBase;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
 public class login extends browserBase {
+    public static void main(String[] args) {
+
+    }
+    browser bro = new browser();
+    public login(){
+
+        bro.openBrowser("edge");
+        bro.openWebsite();
+    }
 
     @Given("open login page")
     public void openLoginPage() throws InterruptedException {
@@ -22,6 +31,8 @@ public class login extends browserBase {
     }
     @And("verify login")
     public void verifyLogin(){
+
         login.notificationCheck();
+        bro.closeBrowser();
     }
 }
